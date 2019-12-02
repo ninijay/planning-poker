@@ -1,8 +1,25 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { GameComponent } from './game/game.component';
+import { MainComponent } from './main/main.component';
+import { PlayerSelectionComponent } from './player-selection/player-selection.component';
+import { StoriesSelectionComponent } from './stories-selection/stories-selection.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'game/players', component: PlayerSelectionComponent
+  },
+  {
+    path: 'game/stories', component: StoriesSelectionComponent
+  },
+  {
+    path: 'game/start', component: GameComponent
+  },
+  {
+    path: '**', component: MainComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

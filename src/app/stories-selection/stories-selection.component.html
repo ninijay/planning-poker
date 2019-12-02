@@ -1,0 +1,30 @@
+<div class="container">
+  <form [formGroup]="storiesform" (ngSubmit)="onSubmit(storiesform.value)">
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="description">
+        Description
+      </label>
+      <input id="description" type="text" formControlName="description">
+    </div>
+    <div>
+      <label for="points">
+        Points
+      </label>
+      <input id="points" type="text" formControlName="points" disabled>
+    </div>
+    <button class="button" type="submit">Add</button>
+
+  </form>
+  <ul>
+    <li *ngFor="let story of stories">
+      {{story.name}} - {{story.description}} - {{story.points}}
+    </li>
+  </ul>
+  <button *ngIf="stories.length > 0" routerLink="/game/start">Start</button>
+</div>

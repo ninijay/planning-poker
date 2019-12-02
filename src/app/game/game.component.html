@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <app-card *ngFor="let card of cards" (selectedBid)="addBid($event)" [currentcard]="card">{{card}}</app-card>
+    </div>
+    <div class="col-9">
+      <div class="story position-fixed">
+        <h1>
+          {{currentStory.name}}
+        </h1>
+        <p>
+          {{currentStory.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

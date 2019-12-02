@@ -1,0 +1,27 @@
+<div class="container">
+  <form *ngIf="players.length < 10" [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="role">
+        Role
+      </label>
+      <input id="role" type="text" formControlName="role">
+    </div>
+    <button class="button" type="submit">Add</button>
+
+  </form>
+  <div *ngIf="players.length >= 10">
+    Already max. Players
+  </div>
+  <ul>
+    <li *ngFor="let player of players">
+      {{player.name}} - {{player.role}}
+    </li>
+  </ul>
+  <button *ngIf="players.length > 0" routerLink="/game/stories">Next (User Stories)</button>
+</div>
