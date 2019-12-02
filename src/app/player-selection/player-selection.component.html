@@ -1,18 +1,18 @@
 <div class="container">
   <form *ngIf="players.length < 10" [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
-    <div>
+    <div class="form-group">
       <label for="name">
         Name
       </label>
-      <input id="name" type="text" formControlName="name">
+      <input id="name" class="form-control" type="text" formControlName="name">
     </div>
-    <div>
+    <div class="form-group">
       <label for="role">
         Role
       </label>
-      <input id="role" type="text" formControlName="role">
+      <input id="role" class="form-control" type="text" formControlName="role">
     </div>
-    <button class="button" type="submit">Add</button>
+    <button class="btn btn-primary" type="submit">Add</button>
 
   </form>
   <div *ngIf="players.length >= 10">
@@ -23,5 +23,5 @@
       {{player.name}} - {{player.role}}
     </li>
   </ul>
-  <button *ngIf="players.length > 0" routerLink="/game/stories">Next (User Stories)</button>
+  <button *ngIf="players.length > 0" class="btn btn-warning" routerLink="/game/stories">Next (User Stories)</button>
 </div>
