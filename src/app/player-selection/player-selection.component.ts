@@ -17,7 +17,8 @@ export class PlayerSelectionComponent implements OnInit {
   ) {
     this.playerForm = this.formBuilder.group({
       name: '',
-      role: ''
+      role: '',
+      email: ''
     });
   }
 
@@ -30,6 +31,7 @@ export class PlayerSelectionComponent implements OnInit {
 
   onSubmit(playerData) {
     this.gameSettings.addPlayer(playerData);
+    this.playerForm.reset();
     console.log(this.players);
   }
 }
