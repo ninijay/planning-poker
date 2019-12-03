@@ -8,6 +8,9 @@ import { PlayerSelectionComponent } from './player-selection/player-selection.co
 import { StoriesSelectionComponent } from './stories-selection/stories-selection.component';
 import { GameComponent } from './game/game.component';
 import { CardComponent } from './card/card.component';
+import { OverviewComponent } from './overview/overview.component';
+import { PlayerlistComponent } from './playerlist/playerlist.component';
+import { StorylistComponent } from './storylist/storylist.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { CardComponent } from './card/card.component';
     PlayerSelectionComponent,
     StoriesSelectionComponent,
     GameComponent,
-    CardComponent
+    CardComponent,
+    OverviewComponent,
+    PlayerlistComponent,
+    StorylistComponent
   ],
   imports: [
     BrowserModule,

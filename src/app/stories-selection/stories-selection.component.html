@@ -29,18 +29,11 @@
           </form>
     </div>
   </div>
-<div class="row">
-  <div class="col-6 offset-3">
-      <ul class="list-group list-group-flush">
-          <li class="list-group-item text-center" *ngFor="let story of stories">
-            <b>{{story.name}}</b> <br/> {{story.description}}
-          </li>
-        </ul>
-  </div>
-</div>
+<app-storylist></app-storylist>
 <div class="row">
   <div class="col">
-      <button *ngIf="stories.length > 0" class="btn btn-success float-right" routerLink="/game/start">Start</button>
+      <button class="btn btn-danger float-left" routerLink="/game/players">Back</button>
+      <button *ngIf="stories.length > 0" class="btn btn-success float-right" routerLink="/game/overview">Overview</button>
   </div>
 </div>
 </div>

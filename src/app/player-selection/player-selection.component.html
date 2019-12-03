@@ -29,24 +29,11 @@
           </form>
     </div>
   </div>
-  <div class="row">
-    <div class="col-6 offset-3">
-        <div *ngIf="players.length >= 10">
-            Already max. Players
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center" *ngFor="let player of players">
-              {{player.name}} | <a href="mailto:{{player.email }}">{{player.email }}</a> | {{player.role}}
-            </li>
-          </ul>
-    </div>
-  </div>
+  <app-playerlist></app-playerlist>
   <div class="row">
     <div class="col">
         <button *ngIf="players.length > 1" class="btn btn-warning mt-4 float-right" routerLink="/game/stories">Next (User Stories)</button>
-
     </div>
-
   </div>
 
 </div>

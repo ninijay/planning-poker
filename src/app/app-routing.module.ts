@@ -4,6 +4,7 @@ import { GameComponent } from './game/game.component';
 import { MainComponent } from './main/main.component';
 import { PlayerSelectionComponent } from './player-selection/player-selection.component';
 import { StoriesSelectionComponent } from './stories-selection/stories-selection.component';
+import { OverviewComponent } from './overview/overview.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'game/start', component: GameComponent
+  },
+  {
+    path: 'game/overview', component : OverviewComponent
   },
   {
     path: '**', component: MainComponent
